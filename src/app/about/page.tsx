@@ -5,13 +5,6 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-4xl mx-auto space-y-12">
-          {/* About Beth Section */}
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              About Beth
-            </h1>
-          </div>
-          
           <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200">
