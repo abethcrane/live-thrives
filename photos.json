@@ -1,0 +1,57 @@
+{
+  "photos": [
+    {
+      "filename": "2021-10-28-_MG_8516.jpg",
+      "band": "Beaven Waller",
+      "location": "Bar Freda",
+      "date": "2021-10-28",
+      "description": "",
+      "person": "",
+      "tags": ["moment of connection"]
+    },
+    {
+      "filename": "2025-05-10-_MG_8505.jpg",
+      "band": "Sorry Darling",
+      "person": "Jackie",
+      "location": "3 Dollar Bill",
+      "date": "2025-05-10",
+      "description": "",
+      "tags": ["power shot"]
+    },
+    {
+      "filename": "2025-02-13-_MG_6025-2.jpg",
+      "band": "Daisy Grenade",
+      "person": "",
+      "location": "Xanadu",
+      "date": "2025-02-13",
+      "description": "",
+      "tags": ["audience interaction"]
+    },
+    {
+      "filename": "2023-08-04-_MG_1858.jpg",
+      "band": "Daisy Grenade",
+      "person": "Keaton",
+      "location": "Empire Underground (Albany)",
+      "date": "2023-08-04",
+      "description": "",
+      "tags": ["power shot"]
+    }
+  ],
+  "bands": {
+    "Beaven Waller": {
+      "instagram": "@beavenwaller",
+      "news": "GLITR GRUNGE album out this year",
+      "nextShow": ""
+    },
+    "Sorry Darling": {
+      "instagram": "@wearesorrydarling",
+      "news": "\"Made Room For Silence\" out this year",
+      "nextShow": "7/19 Vinyl Release show @ Main Drag Music"
+    },
+    "Daisy Grenade": {
+      "instagram": "@daisygrenade",
+      "news": "\"Don't Sweat It\" and \"So Happy\" out this year",
+      "nextShow": ""
+    }
+  }
+}
