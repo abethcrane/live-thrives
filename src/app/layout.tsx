@@ -43,7 +43,7 @@ export default function RootLayout({
           <footer className="bg-white border-t mt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <p className="text-center text-gray-600">
-                © 2024 Live Thrives. All rights reserved.
+                © 2025 Beth Crane. All rights reserved.
               </p>
             </div>
           </footer>

@@ -15,7 +15,7 @@ export default async function HomePage() {
         </p>
       </div>
       
-      <PhotoGrid photos={photos} showExif={true} />
+      <PhotoGrid photos={photos} />
     </div>
   );
 } 
