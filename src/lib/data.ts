@@ -5,9 +5,9 @@ export async function getPhotoData(): Promise<PhotoData> {
   return photoData as PhotoData;
 }
 
-export async function getPhotos(): Promise<Photo[]> {
+export async function getPhotos(): Promise<PhotoWithExif[]> {
   const data = await getPhotoData();
-  return data.photos;
+  return data.photos as PhotoWithExif[];
 }
 
 export async function getBands(): Promise<Record<string, any>> {
@@ -15,17 +15,17 @@ export async function getBands(): Promise<Record<string, any>> {
   return data.bands;
 }
 
-export async function getPhotoByFilename(filename: string): Promise<Photo | null> {
+export async function getPhotoByFilename(filename: string): Promise<PhotoWithExif | null> {
   const photos = await getPhotos();
   return photos.find(photo => photo.filename === filename) || null;
 }
 
-export async function getPhotosByBand(bandName: string): Promise<Photo[]> {
+export async function getPhotosByBand(bandName: string): Promise<PhotoWithExif[]> {
   const photos = await getPhotos();
   return photos.filter(photo => photo.band === bandName);
 }
 
-export async function getPhotosByTag(tag: string): Promise<Photo[]> {
+export async function getPhotosByTag(tag: string): Promise<PhotoWithExif[]> {
   const photos = await getPhotos();
   return photos.filter(photo => photo.tags.includes(tag));
 }
@@ -61,4 +61,32 @@ export function getUniqueTags(): string[] {
 
 export function getUniqueBands(): string[] {
   return Array.from(new Set(photoData.photos.map((photo: Photo) => photo.band)));
+}
+
+export function formatExifData(exif: any): string {
+  if (!exif) return '';
+  
+  const parts = [];
+  
+  if (exif.make && exif.model) {
+    parts.push(`${exif.make} ${exif.model}`);
+  }
+  
+  if (exif.focalLength) {
+    parts.push(`${exif.focalLength}mm`);
+  }
+  
+  if (exif.aperture) {
+    parts.push(`f/${exif.aperture}`);
+  }
+  
+  if (exif.shutterSpeed) {
+    parts.push(exif.shutterSpeed);
+  }
+  
+  if (exif.iso) {
+    parts.push(`ISO ${exif.iso}`);
+  }
+  
+  return parts.join(' • ');
 } 

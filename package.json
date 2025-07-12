@@ -4,17 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run extract-exif && next build",
     "start": "next start",
-    "export": "next build && next export",
-    "lint": "next lint"
+    "export": "npm run build && next export",
+    "lint": "next lint",
+    "extract-exif": "node scripts/extract-exif.js"
   },
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "exifr": "^7.1.3",
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "sharp": "^0.32.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

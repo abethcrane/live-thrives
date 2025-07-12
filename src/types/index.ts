@@ -28,5 +28,10 @@ export interface PhotoWithExif extends Photo {
     aperture?: number;
     shutterSpeed?: string;
     iso?: number;
+    dateTaken?: string;
+    exposureCompensation?: number;
+    meteringMode?: string;
+    flash?: string;
+    whiteBalance?: string;
   };
 } 

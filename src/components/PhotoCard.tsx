@@ -1,15 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import { Photo } from '@/types';
+import { PhotoWithExif } from '@/types';
 import { formatDate } from '@/lib/data';
 
 interface PhotoCardProps {
-  photo: Photo;
+  photo: PhotoWithExif;
   onClick?: () => void;
+  showExif?: boolean;
 }
 
-export default function PhotoCard({ photo, onClick }: PhotoCardProps) {
+export default function PhotoCard({ photo, onClick, showExif = false }: PhotoCardProps) {
   return (
     <div 
       className="group relative overflow-hidden rounded-lg bg-gray-100 cursor-pointer transition-transform duration-300 hover:scale-105"
@@ -43,6 +44,44 @@ export default function PhotoCard({ photo, onClick }: PhotoCardProps) {
                   {tag}
                 </span>
               ))}
+            </div>
+          )}
+          
+          {/* EXIF Data Display */}
+          {showExif && photo.exif && (
+            <div className="mt-3 pt-3 border-t border-white/20">
+              <div className="grid grid-cols-2 gap-2 text-xs opacity-75">
+                {photo.exif.make && photo.exif.model && (
+                  <div>
+                    <span className="font-medium">Camera:</span> {photo.exif.make} {photo.exif.model}
+                  </div>
+                )}
+                {photo.exif.lens && (
+                  <div>
+                    <span className="font-medium">Lens:</span> {photo.exif.lens}
+                  </div>
+                )}
+                {photo.exif.focalLength && (
+                  <div>
+                    <span className="font-medium">Focal:</span> {photo.exif.focalLength}mm
+                  </div>
+                )}
+                {photo.exif.aperture && (
+                  <div>
+                    <span className="font-medium">Aperture:</span> f/{photo.exif.aperture}
+                  </div>
+                )}
+                {photo.exif.shutterSpeed && (
+                  <div>
+                    <span className="font-medium">Shutter:</span> {photo.exif.shutterSpeed}
+                  </div>
+                )}
+                {photo.exif.iso && (
+                  <div>
+                    <span className="font-medium">ISO:</span> {photo.exif.iso}
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>

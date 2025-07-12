@@ -1,15 +1,16 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Photo } from '@/types';
+import { PhotoWithExif } from '@/types';
 import PhotoCard from './PhotoCard';
 import { getUniqueBands, getUniqueTags } from '@/lib/data';
 
 interface PhotoGridProps {
-  photos: Photo[];
+  photos: PhotoWithExif[];
+  showExif?: boolean;
 }
 
-export default function PhotoGrid({ photos }: PhotoGridProps) {
+export default function PhotoGrid({ photos, showExif = false }: PhotoGridProps) {
   const [selectedBand, setSelectedBand] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -30,7 +31,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
     });
   }, [photos, selectedBand, selectedTag, searchTerm]);
 
-  const handlePhotoClick = (photo: Photo) => {
+  const handlePhotoClick = (photo: PhotoWithExif) => {
     // TODO: Implement photo modal/detail view
     console.log('Photo clicked:', photo);
   };
@@ -100,6 +101,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
               key={photo.filename}
               photo={photo}
               onClick={() => handlePhotoClick(photo)}
+              showExif={showExif}
             />
           ))}
         </div>
