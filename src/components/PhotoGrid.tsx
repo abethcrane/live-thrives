@@ -45,7 +45,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
             placeholder="Search bands, locations, people..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white placeholder-gray-500"
           />
         </div>
         
@@ -53,7 +53,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
           <select
             value={selectedBand}
             onChange={(e) => setSelectedBand(e.target.value)}
-            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
           >
             <option value="">All Bands</option>
             {bands.map(band => (
@@ -64,7 +64,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
           <select
             value={selectedTag}
             onChange={(e) => setSelectedTag(e.target.value)}
-            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
           >
             <option value="">All Tags</option>
             {tags.map(tag => (
@@ -79,7 +79,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
                 setSelectedTag('');
                 setSearchTerm('');
               }}
-              className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
+              className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors text-gray-900"
             >
               Clear Filters
             </button>
