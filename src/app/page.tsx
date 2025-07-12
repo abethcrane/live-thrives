@@ -11,10 +11,10 @@ export default async function HomePage() {
         <div className="space-y-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Live Music Photography
+              Live Thrives 2025: Beth Crane
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-              Capturing the energy and passion of live music performances across local venues
+              Capturing moments of joy and connection on-stage
             </p>
           </div>
           

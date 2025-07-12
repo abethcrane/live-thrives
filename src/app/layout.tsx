@@ -27,17 +27,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#1f2937" />
         <link rel="icon" href="/favicon.ico" />
-        <title>Live Thrives - Live Music Photography Gallery</title>
+        <title>Beth Crane - Live Music Photography Gallery</title>
         <meta name="description" content="Capturing the energy and passion of live music performances across local venues. Browse our collection of live music photography." />
         <meta name="keywords" content="live music, photography, concert photos, local bands, music venues" />
         <meta name="author" content="Beth Crane" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Live Thrives - Live Music Photography Gallery" />
+        <meta property="og:title" content="Beth Crane - Live Music Photography Gallery" />
         <meta property="og:description" content="Capturing the energy and passion of live music performances across local venues." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Live Thrives - Live Music Photography Gallery" />
+        <meta name="twitter:title" content="Beth Crane - Live Music Photography Gallery" />
         <meta name="twitter:description" content="Capturing the energy and passion of live music performances across local venues." />
       </head>
       <body className={`${inter.className} antialiased`}>
@@ -46,7 +46,9 @@ export default function RootLayout({
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center py-4 sm:py-6">
                 <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
-                  Live Thrives
+                  <a href="/" className="hover:text-gray-700 transition-colors">
+                    Beth Crane: Live Thrives
+                  </a>
                 </h1>
                 <nav className="hidden md:flex space-x-8">
                   <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
