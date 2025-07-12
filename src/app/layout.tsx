@@ -1,40 +1,44 @@
-import type { Metadata } from 'next';
+'use client';
+
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Live Thrives - Live Music Photography Gallery',
-  description: 'Capturing the energy and passion of live music performances across local venues. Browse our collection of live music photography.',
-  keywords: 'live music, photography, concert photos, local bands, music venues',
-  authors: [{ name: 'Beth Crane' }],
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Live Thrives - Live Music Photography Gallery',
-    description: 'Capturing the energy and passion of live music performances across local venues.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Live Thrives - Live Music Photography Gallery',
-    description: 'Capturing the energy and passion of live music performances across local venues.',
-  },
-};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#1f2937" />
         <link rel="icon" href="/favicon.ico" />
+        <title>Live Thrives - Live Music Photography Gallery</title>
+        <meta name="description" content="Capturing the energy and passion of live music performances across local venues. Browse our collection of live music photography." />
+        <meta name="keywords" content="live music, photography, concert photos, local bands, music venues" />
+        <meta name="author" content="Beth Crane" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Live Thrives - Live Music Photography Gallery" />
+        <meta property="og:description" content="Capturing the energy and passion of live music performances across local venues." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Live Thrives - Live Music Photography Gallery" />
+        <meta name="twitter:description" content="Capturing the energy and passion of live music performances across local venues." />
       </head>
       <body className={`${inter.className} antialiased`}>
         <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -52,13 +56,43 @@ export default function RootLayout({
                     Bands
                   </a>
                 </nav>
-                {/* Mobile menu button - placeholder for future mobile menu */}
-                <button className="md:hidden p-2 text-gray-600 hover:text-gray-900">
+                {/* Mobile menu button */}
+                <button 
+                  className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+                  onClick={toggleMobileMenu}
+                  aria-label="Toggle mobile menu"
+                >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    {isMobileMenuOpen ? (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    )}
                   </svg>
                 </button>
               </div>
+              
+              {/* Mobile menu */}
+              {isMobileMenuOpen && (
+                <div className="md:hidden border-t border-gray-200 py-4">
+                  <nav className="flex flex-col space-y-4">
+                    <a 
+                      href="/" 
+                      className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
+                      onClick={closeMobileMenu}
+                    >
+                      Gallery
+                    </a>
+                    <a 
+                      href="/bands" 
+                      className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
+                      onClick={closeMobileMenu}
+                    >
+                      Bands
+                    </a>
+                  </nav>
+                </div>
+              )}
             </div>
           </header>
           
