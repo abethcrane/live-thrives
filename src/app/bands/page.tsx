@@ -1,29 +1,47 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { getBands, getPhotosByBand } from '@/lib/data';
+import { useState, useEffect, useMemo } from 'react';
+import { getBands, getPhotosByBand, getPhotos } from '@/lib/data';
 import PhotoCard from '@/components/PhotoCard';
 import PhotoModal from '@/components/PhotoModal';
 import { PhotoWithExif } from '@/types';
+import { formatDate } from '@/lib/data';
 
 export default function BandsPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoWithExif | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentBandPhotos, setCurrentBandPhotos] = useState<PhotoWithExif[]>([]);
+  const [allPhotos, setAllPhotos] = useState<PhotoWithExif[]>([]);
   const [bands, setBands] = useState<Record<string, any>>({});
   const [bandNames, setBandNames] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Sort photos by band name alphabetically
+  const sortedPhotos = useMemo(() => {
+    return [...allPhotos].sort((a, b) => {
+      const bandA = a.band.toLowerCase();
+      const bandB = b.band.toLowerCase();
+      if (bandA !== bandB) {
+        return bandA.localeCompare(bandB);
+      }
+      // If same band, sort by date (newest first)
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+  }, [allPhotos]);
 
   // Load data on component mount
   useEffect(() => {
     const loadData = async () => {
       try {
-        const bandsData = await getBands();
+        const [bandsData, photosData] = await Promise.all([
+          getBands(),
+          getPhotos()
+        ]);
         const sortedBandNames = Object.keys(bandsData).sort();
         setBands(bandsData);
         setBandNames(sortedBandNames);
+        setAllPhotos(photosData);
       } catch (error) {
-        console.error('Error loading bands data:', error);
+        console.error('Error loading data:', error);
       } finally {
         setIsLoading(false);
       }
@@ -31,15 +49,9 @@ export default function BandsPage() {
     loadData();
   }, []);
 
-  const handlePhotoClick = async (photo: PhotoWithExif, bandName: string) => {
-    try {
-      const bandPhotos = await getPhotosByBand(bandName);
-      setCurrentBandPhotos(bandPhotos);
-      setSelectedPhoto(photo);
-      setIsModalOpen(true);
-    } catch (error) {
-      console.error('Error loading band photos:', error);
-    }
+  const handlePhotoClick = (photo: PhotoWithExif) => {
+    setSelectedPhoto(photo);
+    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
@@ -50,16 +62,16 @@ export default function BandsPage() {
   const handleNavigate = (direction: 'prev' | 'next') => {
     if (!selectedPhoto) return;
     
-    const currentIndex = currentBandPhotos.findIndex(p => p.filename === selectedPhoto.filename);
+    const currentIndex = sortedPhotos.findIndex(p => p.filename === selectedPhoto.filename);
     let newIndex: number;
     
     if (direction === 'prev') {
-      newIndex = currentIndex > 0 ? currentIndex - 1 : currentBandPhotos.length - 1;
+      newIndex = currentIndex > 0 ? currentIndex - 1 : sortedPhotos.length - 1;
     } else {
-      newIndex = currentIndex < currentBandPhotos.length - 1 ? currentIndex + 1 : 0;
+      newIndex = currentIndex < sortedPhotos.length - 1 ? currentIndex + 1 : 0;
     }
     
-    setSelectedPhoto(currentBandPhotos[newIndex]);
+    setSelectedPhoto(sortedPhotos[newIndex]);
   };
 
   if (isLoading) {
@@ -101,7 +113,8 @@ export default function BandsPage() {
                 key={bandName}
                 bandName={bandName}
                 band={band}
-                onPhotoClick={(photo) => handlePhotoClick(photo, bandName)}
+                allPhotos={allPhotos}
+                onPhotoClick={handlePhotoClick}
               />
             );
           })}
@@ -111,7 +124,7 @@ export default function BandsPage() {
       {/* Photo Modal */}
       <PhotoModal
         photo={selectedPhoto}
-        photos={currentBandPhotos}
+        photos={sortedPhotos}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onNavigate={handleNavigate}
@@ -124,10 +137,12 @@ export default function BandsPage() {
 function BandCard({ 
   bandName, 
   band, 
+  allPhotos,
   onPhotoClick 
 }: { 
   bandName: string; 
   band: any; 
+  allPhotos: PhotoWithExif[];
   onPhotoClick: (photo: PhotoWithExif) => void; 
 }) {
   const [bandPhotos, setBandPhotos] = useState<PhotoWithExif[]>([]);
@@ -203,7 +218,7 @@ function BandCard({
                 {bandPhotos.slice(0, 4).map((photo) => (
                   <div 
                     key={photo.filename} 
-                    className="aspect-[3/2] relative rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
+                    className="group aspect-[3/2] relative rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
                     onClick={() => onPhotoClick(photo)}
                   >
                     <img
@@ -211,6 +226,13 @@ function BandCard({
                       alt={`${photo.band} at ${photo.location}`}
                       className="w-full h-full object-cover"
                     />
+                    {/* Hover overlay with date and location */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <p className="text-sm font-medium mb-1">{photo.location}</p>
+                        <p className="text-xs opacity-90">{formatDate(photo.date)}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
                 {bandPhotos.length > 4 && (
