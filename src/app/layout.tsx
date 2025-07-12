@@ -57,6 +57,9 @@ export default function RootLayout({
                   <a href="/bands" className="text-gray-600 hover:text-gray-900 transition-colors">
                     Bands
                   </a>
+                  <a href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+                    About
+                  </a>
                 </nav>
                 {/* Mobile menu button */}
                 <button 
@@ -91,6 +94,13 @@ export default function RootLayout({
                       onClick={closeMobileMenu}
                     >
                       Bands
+                    </a>
+                    <a 
+                      href="/about" 
+                      className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
+                      onClick={closeMobileMenu}
+                    >
+                      About
                     </a>
                   </nav>
                 </div>
