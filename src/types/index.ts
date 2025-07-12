@@ -6,6 +6,7 @@ export interface Photo {
   description: string;
   person: string;
   tags: string[];
+  colorType?: 'black and white' | 'color' | 'unknown';
 }
 
 export interface Band {

@@ -15,6 +15,7 @@ type SortOption = 'date' | 'band';
 export default function PhotoGrid({ photos }: PhotoGridProps) {
   const [selectedBand, setSelectedBand] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
+  const [selectedColorType, setSelectedColorType] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortOption>('date');
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoWithExif | null>(null);
@@ -29,12 +30,13 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
     const filtered = photos.filter(photo => {
       const matchesBand = !selectedBand || photo.band === selectedBand;
       const matchesTag = !selectedTag || photo.tags.includes(selectedTag);
+      const matchesColorType = !selectedColorType || photo.colorType === selectedColorType;
       const matchesSearch = !searchTerm || 
         photo.band.toLowerCase().includes(searchTerm.toLowerCase()) ||
         photo.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
         photo.person.toLowerCase().includes(searchTerm.toLowerCase());
 
-      return matchesBand && matchesTag && matchesSearch;
+      return matchesBand && matchesTag && matchesColorType && matchesSearch;
     });
 
     // Then sort the filtered photos
@@ -47,7 +49,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
         return a.band.toLowerCase().localeCompare(b.band.toLowerCase());
       }
     });
-  }, [photos, selectedBand, selectedTag, searchTerm, sortBy]);
+  }, [photos, selectedBand, selectedTag, selectedColorType, searchTerm, sortBy]);
 
   const handlePhotoClick = (photo: PhotoWithExif) => {
     setSelectedPhoto(photo);
@@ -77,6 +79,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
   const clearFilters = () => {
     setSelectedBand('');
     setSelectedTag('');
+    setSelectedColorType('');
     setSearchTerm('');
   };
 
@@ -121,6 +124,16 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
             </select>
 
             <select
+              value={selectedColorType}
+              onChange={(e) => setSelectedColorType(e.target.value)}
+              className="flex-1 sm:flex-none px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white text-sm"
+            >
+              <option value="">All Photos</option>
+              <option value="black and white">Black & White</option>
+              <option value="color">Color</option>
+            </select>
+
+            <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               className="flex-1 sm:flex-none px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white text-sm"
@@ -129,7 +142,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
               <option value="band">Sort by Band</option>
             </select>
             
-            {(selectedBand || selectedTag || searchTerm) && (
+            {(selectedBand || selectedTag || selectedColorType || searchTerm) && (
               <button
                 onClick={clearFilters}
                 className="flex-1 sm:flex-none px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors text-gray-900 text-sm font-medium"

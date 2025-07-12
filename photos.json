@@ -23,7 +23,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Manual"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-04-27-_MG_4565.jpg",
@@ -48,7 +49,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-05-08-_MG_5218.jpg",
@@ -73,7 +75,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-06-24-_MG_8969.jpg",
@@ -98,7 +101,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-07-08-_MG_9834.jpg",
@@ -123,7 +127,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-07-13-_MG_1467.jpg",
@@ -148,7 +153,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2023-08-04-_MG_1858.jpg",
@@ -173,7 +179,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-08-04-_MG_2215.jpg",
@@ -198,7 +205,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2023-08-04-_MG_2427.jpg",
@@ -223,7 +231,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-08-05-_MG_2869.jpg",
@@ -248,7 +257,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2023-10-29-_MG_5498-Enhanced-NR.jpg",
@@ -273,7 +283,8 @@
         "meteringMode": "Spot",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2023-10-29-_MG_6247.jpg",
@@ -298,7 +309,8 @@
         "meteringMode": "Spot",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2023-11-28-_MG_9327.jpg",
@@ -323,7 +335,8 @@
         "meteringMode": "CenterWeightedAverage",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-04-16-_MG_2209.jpg",
@@ -348,7 +361,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2024-06-27-_MG_5516.jpg",
@@ -373,7 +387,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-06-27-_MG_5892.jpg",
@@ -398,7 +413,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-06-27-_MG_5678.jpg",
@@ -423,7 +439,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2024-07-24-_MG_6656.jpg",
@@ -448,7 +465,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2024-08-06-_MG_8279.jpg",
@@ -473,7 +491,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-10-02-_MG_0889.jpg",
@@ -498,7 +517,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2024-10-23-_MG_1337.jpg",
@@ -523,7 +543,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-10-02-_MG_0617-2.jpg",
@@ -548,7 +569,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-10-02-_MG_1171.jpg",
@@ -573,7 +595,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2024-10-02-_MG_1005.jpg",
@@ -598,7 +621,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2024-09-26-_MG_9877-Enhanced-NR-4.jpg",
@@ -623,7 +647,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2025-02-13-_MG_5701.jpg",
@@ -648,7 +673,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-02-13-_MG_6025-2.jpg",
@@ -673,7 +699,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-02-14-_MG_6608.jpg",
@@ -698,7 +725,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-02-23-_MG_7938.jpg",
@@ -723,7 +751,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2025-02-19-_MG_7183.jpg",
@@ -748,7 +777,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-04-04-_MG_8135-Enhanced-NR.jpg",
@@ -773,7 +803,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-05-09-_MG_8231.jpg",
@@ -798,7 +829,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2025-05-10-_MG_8505.jpg",
@@ -823,7 +855,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     },
     {
       "filename": "2025-06-11-_MG_9879.jpg",
@@ -848,7 +881,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2025-05-31-_MG_8948-Enhanced-NR.jpg",
@@ -873,7 +907,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "black and white"
     },
     {
       "filename": "2025-05-29-250529000483870036.jpg",
@@ -898,7 +933,8 @@
         "meteringMode": "Pattern",
         "flash": "Flash did not fire, compulsory flash mode",
         "whiteBalance": "Auto"
-      }
+      },
+      "colorType": "color"
     }
   ]
 }
