@@ -49,7 +49,7 @@ export default function RootLayout({
                   </a>
                 </h1>
                 <nav className="hidden md:flex space-x-8">
-                  <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <a href="/gallery" className="text-gray-600 hover:text-gray-900 transition-colors">
                     Gallery
                   </a>
                   <a href="/bands" className="text-gray-600 hover:text-gray-900 transition-colors">
