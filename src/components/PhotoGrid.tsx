@@ -11,6 +11,7 @@ interface PhotoGridProps {
 }
 
 type SortOption = 'date' | 'band';
+type SortDirection = 'asc' | 'desc';
 
 export default function PhotoGrid({ photos }: PhotoGridProps) {
   const [selectedBand, setSelectedBand] = useState<string>('');
@@ -18,6 +19,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
   const [selectedColorType, setSelectedColorType] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortOption>('date');
+  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoWithExif | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -41,15 +43,18 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
 
     // Then sort the filtered photos
     return filtered.sort((a, b) => {
+      let comparison = 0;
+      
       if (sortBy === 'date') {
-        // Sort by date (newest first)
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
+        comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
       } else {
-        // Sort by band name (alphabetically)
-        return a.band.toLowerCase().localeCompare(b.band.toLowerCase());
+        comparison = a.band.toLowerCase().localeCompare(b.band.toLowerCase());
       }
+      
+      // Apply sort direction
+      return sortDirection === 'asc' ? comparison : -comparison;
     });
-  }, [photos, selectedBand, selectedTag, selectedColorType, searchTerm, sortBy]);
+  }, [photos, selectedBand, selectedTag, selectedColorType, searchTerm, sortBy, sortDirection]);
 
   const handlePhotoClick = (photo: PhotoWithExif) => {
     setSelectedPhoto(photo);
@@ -81,6 +86,10 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
     setSelectedTag('');
     setSelectedColorType('');
     setSearchTerm('');
+  };
+
+  const toggleSortDirection = () => {
+    setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
   };
 
   return (
@@ -141,6 +150,28 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
               <option value="date">Sort by Date</option>
               <option value="band">Sort by Band</option>
             </select>
+
+            <button
+              onClick={toggleSortDirection}
+              className="flex-1 sm:flex-none px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-900 bg-white text-sm font-medium flex items-center justify-center gap-1"
+              title={`Sort ${sortDirection === 'asc' ? 'Ascending' : 'Descending'}`}
+            >
+              {sortDirection === 'asc' ? (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  </svg>
+                  Asc
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  Desc
+                </>
+              )}
+            </button>
             
             {(selectedBand || selectedTag || selectedColorType || searchTerm) && (
               <button
