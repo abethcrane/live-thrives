@@ -10,18 +10,22 @@ interface PhotoGridProps {
   photos: PhotoWithExif[];
 }
 
+type SortOption = 'date' | 'band';
+
 export default function PhotoGrid({ photos }: PhotoGridProps) {
   const [selectedBand, setSelectedBand] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<SortOption>('date');
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoWithExif | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const bands = useMemo(() => getUniqueBands(), []);
   const tags = useMemo(() => getUniqueTags(), []);
 
-  const filteredPhotos = useMemo(() => {
-    return photos.filter(photo => {
+  const filteredAndSortedPhotos = useMemo(() => {
+    // First filter the photos
+    const filtered = photos.filter(photo => {
       const matchesBand = !selectedBand || photo.band === selectedBand;
       const matchesTag = !selectedTag || photo.tags.includes(selectedTag);
       const matchesSearch = !searchTerm || 
@@ -31,7 +35,18 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
 
       return matchesBand && matchesTag && matchesSearch;
     });
-  }, [photos, selectedBand, selectedTag, searchTerm]);
+
+    // Then sort the filtered photos
+    return filtered.sort((a, b) => {
+      if (sortBy === 'date') {
+        // Sort by date (newest first)
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      } else {
+        // Sort by band name (alphabetically)
+        return a.band.toLowerCase().localeCompare(b.band.toLowerCase());
+      }
+    });
+  }, [photos, selectedBand, selectedTag, searchTerm, sortBy]);
 
   const handlePhotoClick = (photo: PhotoWithExif) => {
     setSelectedPhoto(photo);
@@ -46,16 +61,16 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
   const handleNavigate = (direction: 'prev' | 'next') => {
     if (!selectedPhoto) return;
     
-    const currentIndex = filteredPhotos.findIndex(p => p.filename === selectedPhoto.filename);
+    const currentIndex = filteredAndSortedPhotos.findIndex(p => p.filename === selectedPhoto.filename);
     let newIndex: number;
     
     if (direction === 'prev') {
-      newIndex = currentIndex > 0 ? currentIndex - 1 : filteredPhotos.length - 1;
+      newIndex = currentIndex > 0 ? currentIndex - 1 : filteredAndSortedPhotos.length - 1;
     } else {
-      newIndex = currentIndex < filteredPhotos.length - 1 ? currentIndex + 1 : 0;
+      newIndex = currentIndex < filteredAndSortedPhotos.length - 1 ? currentIndex + 1 : 0;
     }
     
-    setSelectedPhoto(filteredPhotos[newIndex]);
+    setSelectedPhoto(filteredAndSortedPhotos[newIndex]);
   };
 
   return (
@@ -95,6 +110,15 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
                 <option key={tag} value={tag}>{tag}</option>
               ))}
             </select>
+
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 bg-white"
+            >
+              <option value="date">Sort by Date</option>
+              <option value="band">Sort by Band</option>
+            </select>
             
             {(selectedBand || selectedTag || searchTerm) && (
               <button
@@ -113,13 +137,13 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
 
         {/* Results count */}
         <div className="text-sm text-gray-600">
-          Showing {filteredPhotos.length} of {photos.length} photos
+          Showing {filteredAndSortedPhotos.length} of {photos.length} photos
         </div>
 
         {/* Photo Grid */}
-        {filteredPhotos.length > 0 ? (
+        {filteredAndSortedPhotos.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredPhotos.map((photo) => (
+            {filteredAndSortedPhotos.map((photo) => (
               <PhotoCard
                 key={photo.filename}
                 photo={photo}
@@ -137,7 +161,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
       {/* Photo Modal */}
       <PhotoModal
         photo={selectedPhoto}
-        photos={filteredPhotos}
+        photos={filteredAndSortedPhotos}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onNavigate={handleNavigate}
