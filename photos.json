@@ -284,7 +284,7 @@
       "filename": "2023-11-28-_MG_9327.jpg",
       "band": "Christopher + Sienna Sears",
       "person": "",
-      "location": "Rockwood 2 (RIP)",
+      "location": "Rockwood 2",
       "date": "2023-11-28",
       "description": "",
       "tags": [],
@@ -330,7 +330,7 @@
       "filename": "2024-06-27-_MG_5516.jpg",
       "band": "John Gallagher Jr.",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-06-27",
       "description": "",
       "tags": [],
@@ -353,7 +353,7 @@
       "filename": "2024-06-27-_MG_5678.jpg",
       "band": "Bandits on the Run",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-06-27",
       "description": "",
       "tags": [],
@@ -422,7 +422,7 @@
       "filename": "2024-10-02-_MG_0889.jpg",
       "band": "Camp Bedford",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
       "tags": [],
@@ -468,7 +468,7 @@
       "filename": "2024-10-02-_MG_0617-2.jpg",
       "band": "Taylor Pearlstein",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-10-02",
       "description": "",
       "tags": [],
@@ -491,7 +491,7 @@
       "filename": "2024-10-02-_MG_1171.jpg",
       "band": "Camp Bedford",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
       "tags": [],
@@ -514,7 +514,7 @@
       "filename": "2024-10-02-_MG_1005.jpg",
       "band": "Camp Bedford",
       "person": "",
-      "location": "Brooklyn Made (RIP)",
+      "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
       "tags": [],
@@ -799,142 +799,5 @@
         "whiteBalance": "Auto"
       }
     }
-  ],
-  "bands": {
-    "Beaven Waller": {
-      "instagram": "@beavenwaller",
-      "news": "GLITR GRUNGE album out this year",
-      "nextShow": ""
-    },
-    "Sorry Darling": {
-      "instagram": "@wearesorrydarling",
-      "news": "\"Made Room For Silence\" out this year",
-      "nextShow": "7/19 Vinyl Release show @ Main Drag Music"
-    },
-    "Daisy Grenade": {
-      "instagram": "@daisygrenade",
-      "news": "\"Don't Sweat It\" and \"So Happy\" out this year",
-      "nextShow": ""
-    },
-    "Young Culture": {
-      "instagram": "@youngcultureny",
-      "news": "",
-      "nextShow": ""
-    },
-    "Raising Daughters": {
-      "instagram": "@raisingdaughters_music",
-      "news": "\"Holy\" out this year",
-      "nextShow": ""
-    },
-    "Gemma Laurence": {
-      "instagram": "@gemmalaurencemusic",
-      "news": "\"Harbor\", \"Hedonist\", \"Bloodlines\" out this year",
-      "nextShow": "7/18 LP Release @ The Sultan Room"
-    },
-    "The Racquets": {
-      "instagram": "@theracquets",
-      "news": "\"My Luck's Run Out\" out this year",
-      "nextShow": ""
-    },
-    "Christopher + Sienna Sears": {
-      "instagram": "@christophersearsart @siennasears",
-      "news": "3 LIVE SONGS (Live) out this year",
-      "nextShow": ""
-    },
-    "Wild Powwers": {
-      "instagram": "@wildpowwers",
-      "news": "",
-      "nextShow": ""
-    },
-    "Hodera": {
-      "instagram": "@hodera",
-      "news": "Old Wounds album out this year",
-      "nextShow": ""
-    },
-    "Cinemartyr": {
-      "instagram": "@cine.martyr",
-      "news": "",
-      "nextShow": ""
-    },
-    "Minka": {
-      "instagram": "@catdaddyonthebass @weareminka",
-      "news": "Dance Man EP out this year",
-      "nextShow": ""
-    },
-    "Bandits on the Run": {
-      "instagram": "@banditsontherun",
-      "news": "The Shakespeare Tapes EP out this year",
-      "nextShow": "7/23 show @ Wave Hill (the Bronx)"
-    },
-    "Zir Indigo": {
-      "instagram": "@zir.indigo",
-      "news": "",
-      "nextShow": ""
-    },
-    "John Gallagher Jr.": {
-      "instagram": "@johngallagherjunior",
-      "news": "",
-      "nextShow": ""
-    },
-    "Claire Ozmun Band": {
-      "instagram": "@claireozmun @bettyonsax",
-      "news": "",
-      "nextShow": ""
-    },
-    "Captain Tallen and the Benevolent Entities": {
-      "instagram": "@captaintallen",
-      "news": "Easy, Then EP out this year",
-      "nextShow": "7/14 poetry/music set @ CASSETTE"
-    },
-    "Camp Bedford": {
-      "instagram": "@campbedfordband",
-      "news": "",
-      "nextShow": ""
-    },
-    "Pip the Band": {
-      "instagram": "@halseyphillipharkins",
-      "news": "An Inch Away From Shit EP out this year (bandcamp)",
-      "nextShow": ""
-    },
-    "Taylor Pearlstein": {
-      "instagram": "@taypearlstein",
-      "news": "",
-      "nextShow": "7/18 @ The Sultan Room"
-    },
-    "Monica Bang": {
-      "instagram": "@monicabang",
-      "news": "",
-      "nextShow": ""
-    },
-    "Strange Neighbors": {
-      "instagram": "@strangeneighborsmusic",
-      "news": "People Pleasers Pleasing People album out this year",
-      "nextShow": "7/19 @ Lucky 7 Tavern"
-    },
-    "Moon Walker": {
-      "instagram": "@moonwalkerbandofficial",
-      "news": "Is This The World You Wanted album out this year",
-      "nextShow": ""
-    },
-    "Claire de Bluen": {
-      "instagram": "@claireozmun",
-      "news": "",
-      "nextShow": ""
-    },
-    "Sachi Keiko": {
-      "instagram": "@sachi.keiko",
-      "news": "\"The Tree\" and \"Screentime\" out this year",
-      "nextShow": ""
-    },
-    "Beche": {
-      "instagram": "@becheforever",
-      "news": "\"Quarter Life\" and \"Laymen\" out this year",
-      "nextShow": ""
-    },
-    "World's Greatest Dad": {
-      "instagram": "@wgdband",
-      "news": "",
-      "nextShow": ""
-    }
-  }
+  ]
 }

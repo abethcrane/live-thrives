@@ -16,7 +16,6 @@ export interface Band {
 
 export interface PhotoData {
   photos: Photo[];
-  bands: Record<string, Band>;
 }
 
 export interface PhotoWithExif extends Photo {

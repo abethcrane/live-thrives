@@ -1,4 +1,5 @@
 import photoData from '../../photos.json';
+import bandsData from '../../bands.json';
 import { PhotoData, Photo, PhotoWithExif } from '@/types';
 
 export async function getPhotoData(): Promise<PhotoData> {
@@ -11,8 +12,7 @@ export async function getPhotos(): Promise<PhotoWithExif[]> {
 }
 
 export async function getBands(): Promise<Record<string, any>> {
-  const data = await getPhotoData();
-  return data.bands;
+  return bandsData.bands;
 }
 
 export async function getPhotoByFilename(filename: string): Promise<PhotoWithExif | null> {
