@@ -32,7 +32,9 @@
       "location": "Mercury Lounge",
       "date": "2023-04-27",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -55,7 +57,9 @@
       "location": "Mercury Lounge",
       "date": "2023-05-08",
       "description": "",
-      "tags": [],
+      "tags": [
+        "whole band"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -78,7 +82,9 @@
       "location": "Tractor Tavern (Seattle)",
       "date": "2023-06-24",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -101,7 +107,9 @@
       "location": "The Sydney (Omaha)",
       "date": "2023-07-08",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -124,7 +132,9 @@
       "location": "Our Wicked Lady",
       "date": "2023-07-13",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -172,7 +182,9 @@
       "location": "Empire Underground (Albany)",
       "date": "2023-08-04",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -195,7 +207,9 @@
       "location": "Empire Underground (Albany)",
       "date": "2023-08-04",
       "description": "",
-      "tags": [],
+      "tags": [
+        "audience interaction"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -218,7 +232,9 @@
       "location": "Radio Bean (Vermont)",
       "date": "2023-08-05",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -241,7 +257,9 @@
       "location": "Berlin Under A",
       "date": "2023-10-29",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -264,7 +282,9 @@
       "location": "Berlin Under A",
       "date": "2023-10-29",
       "description": "",
-      "tags": [],
+      "tags": [
+        "whole band"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -287,7 +307,9 @@
       "location": "Rockwood 2",
       "date": "2023-11-28",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -310,7 +332,9 @@
       "location": "Berlin Under A",
       "date": "2024-04-16",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -333,7 +357,9 @@
       "location": "Brooklyn Made",
       "date": "2024-06-27",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -350,13 +376,40 @@
       }
     },
     {
+      "filename": "2024-06-27-_MG_5892.jpg",
+      "band": "John Gallagher Jr.",
+      "person": "",
+      "location": "Brooklyn Made",
+      "date": "2024-06-27",
+      "description": "",
+      "tags": [
+        "audience interaction"
+      ],
+      "exif": {
+        "make": "Canon",
+        "model": "Canon EOS 6D Mark II",
+        "lens": "70-200mm F2.8 DG OS HSM | Sports 018",
+        "focalLength": 70,
+        "aperture": 2.8,
+        "shutterSpeed": "1/125s",
+        "iso": 4000,
+        "dateTaken": "2024-06-28T03:03:54.000Z",
+        "exposureCompensation": -0.6666666666666666,
+        "meteringMode": "Pattern",
+        "flash": "Flash did not fire, compulsory flash mode",
+        "whiteBalance": "Auto"
+      }
+    },
+    {
       "filename": "2024-06-27-_MG_5678.jpg",
       "band": "Bandits on the Run",
       "person": "",
       "location": "Brooklyn Made",
       "date": "2024-06-27",
       "description": "",
-      "tags": [],
+      "tags": [
+        "audience interaction"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -379,7 +432,9 @@
       "location": "The Sultan Room",
       "date": "2024-06-27",
       "description": "",
-      "tags": [],
+      "tags": [
+        "audience interaction"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -402,7 +457,9 @@
       "location": "CASSETTE",
       "date": "2024-07-24",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -425,7 +482,9 @@
       "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -448,7 +507,9 @@
       "location": "CASSETTE",
       "date": "2024-09-26",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -471,7 +532,9 @@
       "location": "Brooklyn Made",
       "date": "2024-10-02",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -494,7 +557,9 @@
       "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -517,7 +582,9 @@
       "location": "Brooklyn Made",
       "date": "2024-08-06",
       "description": "",
-      "tags": [],
+      "tags": [
+        "audience interaction"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -540,7 +607,9 @@
       "location": "CASSETTE",
       "date": "2024-10-23",
       "description": "",
-      "tags": [],
+      "tags": [
+        "whole band"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -563,7 +632,9 @@
       "location": "Xanadu",
       "date": "2025-02-13",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -611,7 +682,9 @@
       "location": "Main Drag Music",
       "date": "2025-02-14",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -634,7 +707,9 @@
       "location": "Union Pool",
       "date": "2025-02-23",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -657,7 +732,9 @@
       "location": "TV Eye",
       "date": "2025-02-19",
       "description": "",
-      "tags": [],
+      "tags": [
+        "power shot"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -680,7 +757,9 @@
       "location": "Sleepwalk",
       "date": "2025-04-04",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -703,7 +782,9 @@
       "location": "C'mon Everybody",
       "date": "2025-05-09",
       "description": "",
-      "tags": [],
+      "tags": [
+        "moment of connection"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -751,7 +832,9 @@
       "location": "The Sultan Room",
       "date": "2025-06-11",
       "description": "",
-      "tags": [],
+      "tags": [
+        "whole band"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -774,7 +857,9 @@
       "location": "The Broadway",
       "date": "2025-05-31",
       "description": "",
-      "tags": [],
+      "tags": [
+        "whole band"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
@@ -797,7 +882,9 @@
       "location": "Backyard show",
       "date": "2025-05-29",
       "description": "",
-      "tags": [],
+      "tags": [
+        "audience interaction"
+      ],
       "exif": {
         "make": "Canon",
         "model": "Canon EOS 6D Mark II",
