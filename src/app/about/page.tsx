@@ -4,8 +4,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* About Beth Section */}
+          <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               About Beth
             </h1>
@@ -13,7 +14,6 @@ export default function AboutPage() {
           
           <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Image placeholder - you can replace the src with an actual image */}
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
                   <div className="text-center">
@@ -67,6 +67,47 @@ export default function AboutPage() {
                     </a>{' '}
                     on Instagram. :)
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Live Thrives Event Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Live Thrives 2025
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                Back at Bar Freda for the 2nd time, Live Thrives is a showcase of live music photography.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Event Flyer */}
+              <div className="relative h-[500px] rounded-lg overflow-hidden bg-gray-200">
+                <Image
+                  src="/images/live-thrives-flyer.avif"
+                  alt="Live Thrives 2025 Event Flyer"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+
+              {/* Spotify Playlist */}
+              <div className="space-y-4">
+                <div className="rounded-lg overflow-hidden">
+                  <iframe 
+                    style={{borderRadius: '12px'}} 
+                    src="https://open.spotify.com/embed/playlist/4iy7qu1F3bLVhnZLiQFfI5?utm_source=generator" 
+                    width="100%" 
+                    height="500" 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
