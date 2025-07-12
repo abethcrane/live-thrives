@@ -5,6 +5,7 @@ export interface Photo {
   date: string;
   description: string;
   person: string;
+  featuredInstagramHandles: string;
   tags: string[];
   colorType?: 'black and white' | 'color' | 'unknown';
 }
