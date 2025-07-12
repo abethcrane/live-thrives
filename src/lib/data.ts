@@ -2,8 +2,11 @@ import photoData from '../../photos.json';
 import bandsData from '../../bands.json';
 import { PhotoData, Photo, PhotoWithExif } from '@/types';
 
+// Cast the imported JSON data to the correct type
+const typedPhotoData = photoData as PhotoData;
+
 export async function getPhotoData(): Promise<PhotoData> {
-  return photoData as PhotoData;
+  return typedPhotoData;
 }
 
 export async function getPhotos(): Promise<PhotoWithExif[]> {
@@ -55,12 +58,12 @@ export function formatDate(dateString: string): string {
 }
 
 export function getUniqueTags(): string[] {
-  const tags = photoData.photos.flatMap((photo: Photo) => photo.tags);
+  const tags = typedPhotoData.photos.flatMap((photo: Photo) => photo.tags);
   return Array.from(new Set(tags));
 }
 
 export function getUniqueBands(): string[] {
-  return Array.from(new Set(photoData.photos.map((photo: Photo) => photo.band)));
+  return Array.from(new Set(typedPhotoData.photos.map((photo: Photo) => photo.band)));
 }
 
 export function formatExifData(exif: any): string {
