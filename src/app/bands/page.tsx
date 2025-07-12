@@ -7,6 +7,49 @@ import PhotoModal from '@/components/PhotoModal';
 import { PhotoWithExif } from '@/types';
 import { formatDate } from '@/lib/data';
 
+// Color palette for band cards
+const bandColors = [
+  { bg: 'bg-gradient-to-br from-indigo-500 to-purple-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-teal-500 to-blue-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-pink-500 to-rose-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-yellow-500 to-orange-500', text: 'text-gray-900', accent: 'bg-black/20' },
+  { bg: 'bg-gradient-to-br from-emerald-500 to-teal-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-violet-500 to-purple-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-cyan-500 to-blue-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-rose-500 to-pink-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-lime-500 to-green-600', text: 'text-gray-900', accent: 'bg-black/20' },
+  { bg: 'bg-gradient-to-br from-sky-500 to-blue-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-fuchsia-500 to-purple-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-amber-500 to-orange-600', text: 'text-gray-900', accent: 'bg-black/20' },
+  { bg: 'bg-gradient-to-br from-slate-600 to-gray-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-stone-600 to-neutral-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-zinc-600 to-gray-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-red-600 to-rose-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-blue-600 to-indigo-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-green-600 to-emerald-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-pink-600 to-rose-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-indigo-600 to-purple-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-purple-500 to-pink-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-blue-500 to-cyan-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-green-500 to-emerald-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-orange-500 to-red-500', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-teal-600 to-cyan-600', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-emerald-600 to-teal-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-cyan-600 to-blue-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-violet-600 to-purple-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-rose-600 to-pink-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-lime-600 to-green-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-sky-600 to-blue-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-fuchsia-600 to-purple-700', text: 'text-white', accent: 'bg-white/20' },
+  { bg: 'bg-gradient-to-br from-amber-600 to-orange-700', text: 'text-white', accent: 'bg-white/20' },
+];
+
+// Function to get consistent color for a band name
+function getBandColor(bandName: string) {
+  const hash = bandName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return bandColors[hash % bandColors.length];
+}
+
 export default function BandsPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoWithExif | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -140,6 +183,7 @@ function BandCard({
 }) {
   const [bandPhotos, setBandPhotos] = useState<PhotoWithExif[]>([]);
   const [isLoadingPhotos, setIsLoadingPhotos] = useState(true);
+  const colorScheme = getBandColor(bandName);
 
   useEffect(() => {
     const loadPhotos = async () => {
@@ -156,42 +200,42 @@ function BandCard({
   }, [bandName]);
 
   return (
-    <div className="card flex flex-col h-full">
+    <div className={`card flex flex-col h-full overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] ${colorScheme.bg}`}>
       <div className="p-5 flex-1 flex flex-col">
-        <h2 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">{bandName}</h2>
+        <h2 className={`text-xl font-bold mb-2 line-clamp-1 ${colorScheme.text}`}>{bandName}</h2>
         {band.instagram && (
           <a 
             href={`https://instagram.com/${band.instagram.replace('@', '')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 font-medium text-sm mb-2 block truncate"
+            className={`${colorScheme.text} hover:opacity-80 font-medium text-sm mb-3 block truncate transition-opacity`}
           >
             {band.instagram}
           </a>
         )}
         {band.news && (
-          <div className="mb-1">
-            <h3 className="text-xs font-semibold text-gray-700">Latest News</h3>
-            <p className="text-xs text-gray-600 line-clamp-2">{band.news}</p>
+          <div className="mb-3">
+            <h3 className={`text-xs font-semibold ${colorScheme.text} opacity-90 mb-1`}>Latest News</h3>
+            <p className={`text-xs ${colorScheme.text} opacity-80 line-clamp-2`}>{band.news}</p>
           </div>
         )}
         {band.nextShow && (
-          <div className="mb-1">
-            <h3 className="text-xs font-semibold text-gray-700">Next Show</h3>
-            <p className="text-xs text-gray-600 line-clamp-2">{band.nextShow}</p>
+          <div className="mb-3">
+            <h3 className={`text-xs font-semibold ${colorScheme.text} opacity-90 mb-1`}>Next Show</h3>
+            <p className={`text-xs ${colorScheme.text} opacity-80 line-clamp-2`}>{band.nextShow}</p>
           </div>
         )}
-        <div className="mt-auto pt-2 text-xs text-gray-500">
+        <div className={`mt-auto pt-2 text-xs ${colorScheme.text} opacity-70`}>
           {isLoadingPhotos ? 'Loading photos...' : `${bandPhotos.length} photo${bandPhotos.length !== 1 ? 's' : ''}`}
         </div>
       </div>
       {/* Photo preview grid */}
-      <div className="p-3 border-t border-gray-100 bg-gray-50">
-        <h3 className="text-xs font-semibold text-gray-700 mb-2">Photos</h3>
+      <div className={`p-3 border-t ${colorScheme.accent} backdrop-blur-sm`}>
+        <h3 className={`text-xs font-semibold ${colorScheme.text} opacity-90 mb-2`}>Photos</h3>
         {isLoadingPhotos ? (
           <div className="grid grid-cols-2 gap-2">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="aspect-[3/2] bg-gray-200 rounded-lg animate-pulse" />
+              <div key={i} className={`aspect-[3/2] ${colorScheme.accent} rounded-lg animate-pulse`} />
             ))}
           </div>
         ) : bandPhotos.length > 0 ? (
@@ -218,15 +262,15 @@ function BandCard({
               </div>
             ))}
             {bandPhotos.length > 4 && (
-              <div className="aspect-[3/2] relative rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                <span className="text-xs text-gray-500">
+              <div className={`aspect-[3/2] relative rounded-lg overflow-hidden ${colorScheme.accent} flex items-center justify-center`}>
+                <span className={`text-xs ${colorScheme.text} opacity-70`}>
                   +{bandPhotos.length - 4} more
                 </span>
               </div>
             )}
           </div>
         ) : (
-          <p className="text-xs text-gray-500">No photos available</p>
+          <p className={`text-xs ${colorScheme.text} opacity-70`}>No photos available</p>
         )}
       </div>
     </div>
