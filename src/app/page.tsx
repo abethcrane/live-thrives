@@ -105,6 +105,64 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Pricing Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Print Pricing
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                Available prints and materials for purchase
+                <br/>
+                venmo @abethcrane
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Large Prints</h3>
+                <p className="text-gray-600 mb-2">12" x 18"</p>
+                <p className="text-2xl font-bold text-blue-600">$35</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Medium Prints</h3>
+                <p className="text-gray-600 mb-2">10" x 15"</p>
+                <p className="text-2xl font-bold text-blue-600">$25</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">B Grade Prints</h3>
+                <p className="text-gray-600 mb-2">Medium/Large</p>
+                <p className="text-2xl font-bold text-blue-600">$15</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Prints</h3>
+                <p className="text-gray-600 mb-2">4" x 6" with grommet</p>
+                <p className="text-2xl font-bold text-blue-600">$10</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Papers</h3>
+                <p className="text-gray-600 mb-2">Medium/Large</p>
+                <p className="text-2xl font-bold text-blue-600">$5</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Transfer Papers</h3>
+                <p className="text-gray-600 mb-2">4" x 6"</p>
+                <p className="text-2xl font-bold text-green-600">Free</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 md:col-span-2 lg:col-span-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Photopoetry Books</h3>
+                <p className="text-gray-600 mb-2">Photography by Beth Crane, poems by Tallen Gabriel</p>
+                <p className="text-2xl font-bold text-blue-600">sliding scale $25-50</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

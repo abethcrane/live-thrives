@@ -38,13 +38,6 @@ export default function MobileMenu() {
             >
               Bands
             </a>
-            <a 
-              href="/about" 
-              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
           </nav>
         </div>
       )}
