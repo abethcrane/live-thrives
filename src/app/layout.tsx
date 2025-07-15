@@ -55,6 +55,9 @@ export default function RootLayout({
                   <a href="/bands" className="text-gray-600 hover:text-gray-900 transition-colors">
                     Bands
                   </a>
+                  <a href="/scavenger-hunt" className="text-gray-600 hover:text-gray-900 transition-colors">
+                    Scavenger Hunt
+                  </a>
                 </nav>
                 <MobileMenu />
               </div>

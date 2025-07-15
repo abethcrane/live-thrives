@@ -38,6 +38,13 @@ export default function MobileMenu() {
             >
               Bands
             </a>
+            <a 
+              href="/scavenger-hunt" 
+              className="text-gray-600 hover:text-gray-900 transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
+              onClick={() => setIsOpen(false)}
+            >
+              Scavenger Hunt
+            </a>
           </nav>
         </div>
       )}
