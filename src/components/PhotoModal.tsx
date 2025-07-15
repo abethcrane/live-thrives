@@ -128,14 +128,14 @@ export default function PhotoModal({ photo, photos, isOpen, onClose, onNavigate 
 
       {/* Photo container with touch gestures */}
       <div 
-        className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 overflow-y-auto"
+        className="relative w-full h-full flex flex-col p-2 sm:p-4 overflow-y-auto"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="relative w-full min-h-full flex flex-col items-center justify-center py-4">
+        <div className="relative w-full flex flex-col items-center pt-16 sm:pt-4 pb-4">
           {/* Main image */}
-          <div className="flex-shrink-0 flex items-center justify-center mb-4">
+          <div className="flex-shrink-0 flex items-center justify-center mb-4 w-full">
             <div className="relative w-full max-w-4xl max-h-[60vh] sm:max-h-[calc(100vh-200px)]">
               {!imageLoaded && (
                 <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
