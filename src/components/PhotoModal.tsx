@@ -128,15 +128,15 @@ export default function PhotoModal({ photo, photos, isOpen, onClose, onNavigate 
 
       {/* Photo container with touch gestures */}
       <div 
-        className="relative w-full h-full flex items-center justify-center p-2 sm:p-4"
+        className="relative w-full h-full flex items-center justify-center p-2 sm:p-4 overflow-y-auto"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="relative w-full h-full flex flex-col">
+        <div className="relative w-full min-h-full flex flex-col items-center justify-center py-4">
           {/* Main image */}
-          <div className="flex-1 flex items-center justify-center">
-            <div className="relative w-full max-w-4xl max-h-[calc(100vh-200px)]">
+          <div className="flex-shrink-0 flex items-center justify-center mb-4">
+            <div className="relative w-full max-w-4xl max-h-[60vh] sm:max-h-[calc(100vh-200px)]">
               {!imageLoaded && (
                 <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
                   <div className="w-12 h-12 border-4 border-gray-600 border-t-white rounded-full animate-spin"></div>
@@ -147,7 +147,7 @@ export default function PhotoModal({ photo, photos, isOpen, onClose, onNavigate 
                 alt={`${photo.band} at ${photo.location}`}
                 width={1200}
                 height={800}
-                className={`w-full h-auto max-h-[calc(100vh-200px)] object-contain transition-opacity duration-300 ${
+                className={`w-full h-auto max-h-[60vh] sm:max-h-[calc(100vh-200px)] object-contain transition-opacity duration-300 ${
                   imageLoaded ? 'opacity-100' : 'opacity-0'
                 }`}
                 priority
@@ -157,7 +157,7 @@ export default function PhotoModal({ photo, photos, isOpen, onClose, onNavigate 
           </div>
 
           {/* Photo info overlay */}
-          <div className="w-full max-w-4xl mx-auto mt-2 sm:mt-4">
+          <div className="w-full max-w-4xl mx-auto">
             <div className="bg-black/80 rounded-lg p-4 sm:p-6 text-white">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
                 {/* Basic info */}
