@@ -5,7 +5,125 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-4xl mx-auto space-y-12">
+
+          {/* Live Thrives Event Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Live Thrives 2025
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                Back at Bar Freda for the 2nd time, Live Thrives is a one-night showcase of live music photography. 
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Event Description */}
+              <div className="space-y-4">
+                <p className="text-gray-700 leading-relaxed">
+                  Bar Freda is a live music venue / bar in Ridgewood, and they've agreed to let Beth leave these photos up for a week - come see them before July 20!
+                </p>
+              </div>
+
+              {/* Event Flyer */}
+              <div className="relative h-[500px] rounded-lg overflow-hidden bg-gray-200">
+                <Image
+                  src="/images/live-thrives-flyer.avif"
+                  alt="Live Thrives 2025 Event Flyer"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Spotify Playlist Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                Looking for new tunes?
+              </h3>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                You'll find songs from all 27 bands on this playlist Beth put together
+              </p>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <div className="rounded-lg overflow-hidden">
+                <iframe 
+                  style={{borderRadius: '12px'}} 
+                  src="https://open.spotify.com/embed/playlist/4iy7qu1F3bLVhnZLiQFfI5?utm_source=generator" 
+                  width="100%" 
+                  height="500" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Pricing Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                Print Pricing
+              </h2>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                These prints sure would look cool on your wall
+                <br/>
+                Text Beth to coordinate
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Large Prints</h3>
+                <p className="text-gray-600 mb-2">12" x 18"</p>
+                <p className="text-2xl font-bold text-blue-600">$35</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Medium Prints</h3>
+                <p className="text-gray-600 mb-2">10" x 15"</p>
+                <p className="text-2xl font-bold text-blue-600">$25</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">B Grade Prints</h3>
+                <p className="text-gray-600 mb-2">Medium/Large</p>
+                <p className="text-2xl font-bold text-blue-600">$15</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Prints</h3>
+                <p className="text-gray-600 mb-2">4" x 6" with grommet</p>
+                <p className="text-2xl font-bold text-blue-600">$10</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Papers</h3>
+                <p className="text-gray-600 mb-2">Medium/Large</p>
+                <p className="text-2xl font-bold text-blue-600">$5</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Transfer Papers</h3>
+                <p className="text-gray-600 mb-2">4" x 6"</p>
+                <p className="text-2xl font-bold text-green-600">Free</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6 md:col-span-2 lg:col-span-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Photopoetry Books</h3>
+                <p className="text-gray-600 mb-2">Photography by Beth Crane, poems by Tallen Gabriel</p>
+                <p className="text-2xl font-bold text-blue-600">sliding scale $25-50</p>
+              </div>
+            </div>
+          </div>
+                    {/* About Beth Section */}
+                    <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -65,104 +183,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Live Thrives Event Section */}
-          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Live Thrives 2025
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Back at Bar Freda for the 2nd time, Live Thrives is a showcase of live music photography.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Event Flyer */}
-              <div className="relative h-[500px] rounded-lg overflow-hidden bg-gray-200">
-                <Image
-                  src="/images/live-thrives-flyer.avif"
-                  alt="Live Thrives 2025 Event Flyer"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-
-              {/* Spotify Playlist */}
-              <div className="space-y-4">
-                <div className="rounded-lg overflow-hidden">
-                  <iframe 
-                    style={{borderRadius: '12px'}} 
-                    src="https://open.spotify.com/embed/playlist/4iy7qu1F3bLVhnZLiQFfI5?utm_source=generator" 
-                    width="100%" 
-                    height="500" 
-                    frameBorder="0" 
-                    allowFullScreen 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Pricing Section */}
-          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Print Pricing
-              </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                Available prints and materials for purchase
-                <br/>
-                venmo @abethcrane
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Large Prints</h3>
-                <p className="text-gray-600 mb-2">12" x 18"</p>
-                <p className="text-2xl font-bold text-blue-600">$35</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Medium Prints</h3>
-                <p className="text-gray-600 mb-2">10" x 15"</p>
-                <p className="text-2xl font-bold text-blue-600">$25</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">B Grade Prints</h3>
-                <p className="text-gray-600 mb-2">Medium/Large</p>
-                <p className="text-2xl font-bold text-blue-600">$15</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Prints</h3>
-                <p className="text-gray-600 mb-2">4" x 6" with grommet</p>
-                <p className="text-2xl font-bold text-blue-600">$10</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Papers</h3>
-                <p className="text-gray-600 mb-2">Medium/Large</p>
-                <p className="text-2xl font-bold text-blue-600">$5</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Transfer Papers</h3>
-                <p className="text-gray-600 mb-2">4" x 6"</p>
-                <p className="text-2xl font-bold text-green-600">Free</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6 md:col-span-2 lg:col-span-3">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Photopoetry Books</h3>
-                <p className="text-gray-600 mb-2">Photography by Beth Crane, poems by Tallen Gabriel</p>
-                <p className="text-2xl font-bold text-blue-600">sliding scale $25-50</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
