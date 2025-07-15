@@ -121,7 +121,7 @@ export default function BandsPage() {
             Featured Bands
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover the artists behind the music and stay updated with their latest news
+            Discover the artists behind the music
           </p>
         </div>
         <div className="text-center py-12">
@@ -139,7 +139,7 @@ export default function BandsPage() {
             Featured Bands
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover the artists behind the music and stay updated with their latest news
+            Discover the artists behind the music
           </p>
         </div>
 
