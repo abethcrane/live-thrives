@@ -17,7 +17,7 @@ const scavengerHuntItems = [
   'photo with a lot of negative space',
   'text a friend a photo of them',
   'post an insta story (tag @abethcrane and @barfreda801)',
-  'text beth and tell her which photo is your favorite'
+  'text/DM beth and tell her which photo is your favorite'
 
 ];
 

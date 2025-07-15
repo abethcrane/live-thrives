@@ -84,7 +84,7 @@ export default function HomePage() {
                 Print Pricing
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-               Take a print (or transfer paper from the sublimation process) home! Text Beth to coordinate.
+               Take a print (or transfer paper from the sublimation process) home! Text Beth (or insta DM her - @abethcrane) to coordinate.
               </p>
             </div>
 
