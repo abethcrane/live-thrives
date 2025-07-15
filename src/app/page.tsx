@@ -21,16 +21,14 @@ export default function HomePage() {
               {/* Event Description */}
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  Bar Freda is a live music venue / bar in Ridgewood, and they've agreed to let Beth leave these photos up for a week - come see them before July 20!
-
+                  Bar Freda is a live music venue / bar in Ridgewood, and they've agreed to leave these photos up for a week - come see them before July 20!
                 </p>
-                
                 <p className="text-gray-700 leading-relaxed">
                   Say hi to the bartender(s), grab a drink, and check out the <a href="/scavenger-hunt" className="text-blue-600 hover:text-blue-800 underline">scavenger hunt page</a> - see which ones you can cross off :)
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                  The photos are printed on fabric, using sublimation printing. Thank you to Jim Holodak and All-U for letting us use their space and materials, to Isis for the fabric cutter, and Ida for lending her time/sewing machine.
+                  The photos are printed on fabric, using sublimation printing. Thank you to Jim Holodak and All U, inc. for letting us use their space and materials, to Isis for the fabric cutter, and Ida for lending her time/sewing machine.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                    Above all, thank you to Jeff Schaer-Moses for organizing, and to Dan Holodak for helping with every part of the process 💙
@@ -57,7 +55,7 @@ export default function HomePage() {
                 Looking for new tunes?
               </h3>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                There could be no photos without the bands - you'll find songs from all 27 bands on this playlist 🤘 
+                There would be no photos without the bands - you'll find songs from all 27 bands on this playlist 🤘 
               </p>
             </div>
 
@@ -84,7 +82,7 @@ export default function HomePage() {
                 Print Pricing
               </h2>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-               Take a print (or transfer paper from the sublimation process) home! Text Beth (or insta DM her - @abethcrane) to coordinate.
+               Take a print (or transfer paper from the sublimation process) home! Text me (or DM me on insta @abethcrane) to coordinate.
               </p>
             </div>
 
