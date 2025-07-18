@@ -48,33 +48,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Spotify Playlist Section */}
-          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
-            <div className="text-center mb-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                Looking for new tunes?
-              </h3>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                There would be no photos without the bands - you'll find songs from all 27 bands on this playlist 🤘 
-              </p>
-            </div>
-
-            <div className="max-w-2xl mx-auto">
-              <div className="rounded-lg overflow-hidden">
-                <iframe 
-                  style={{borderRadius: '12px'}} 
-                  src="https://open.spotify.com/embed/playlist/4iy7qu1F3bLVhnZLiQFfI5?utm_source=generator" 
-                  width="100%" 
-                  height="500" 
-                  frameBorder="0" 
-                  allowFullScreen 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Installation Gallery Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="text-center mb-8">
@@ -118,7 +91,34 @@ export default function HomePage() {
             <p className="text-center text-base text-purple-700 mt-8 pt-4">
               ✨ Prints, mini prints (with grommet), and transfer paper available — text/DM beth if interested! ✨
             </p>
+          </div>
 
+
+          {/* Spotify Playlist Section */}
+          <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                Looking for new tunes?
+              </h3>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                There would be no photos without the bands - you'll find songs from all 27 bands on this playlist 🤘 
+              </p>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <div className="rounded-lg overflow-hidden">
+                <iframe 
+                  style={{borderRadius: '12px'}} 
+                  src="https://open.spotify.com/embed/playlist/4iy7qu1F3bLVhnZLiQFfI5?utm_source=generator" 
+                  width="100%" 
+                  height="500" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
 
           {/* About Beth Section */}

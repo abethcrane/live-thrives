@@ -9,8 +9,6 @@ import { useSearchParams } from 'next/navigation';
 import React from 'react';
 
 export default function GalleryPage() {
-  const searchParams = useSearchParams();
-  const tag = searchParams.get('tag') || '';
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -25,13 +23,19 @@ export default function GalleryPage() {
           </div>
           <ErrorBoundary>
             <Suspense fallback={<LoadingSpinner />}>
-              <PhotoGridWrapper tag={tag} />
+              <GalleryPageInner />
             </Suspense>
           </ErrorBoundary>
         </div>
       </div>
     </div>
   );
+}
+
+function GalleryPageInner() {
+  const searchParams = useSearchParams();
+  const tag = searchParams.get('tag') || '';
+  return <PhotoGridWrapper tag={tag} />;
 }
 
 function PhotoGridWrapper({ tag }: { tag: string }) {
