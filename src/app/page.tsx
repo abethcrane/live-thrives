@@ -83,20 +83,25 @@ export default function HomePage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="overflow-hidden rounded-lg shadow">
-                <img src="/images/inside-bands.JPG" alt="Inside Bands" className="w-full h-auto object-cover" />
-              </div>
-              <div className="overflow-hidden rounded-lg shadow">
-                <img src="/images/inside-connection.JPG" alt="Inside Connection" className="w-full h-auto object-cover" />
-              </div>
-              <div className="overflow-hidden rounded-lg shadow">
+              <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/me.JPG" alt="Me at the installation" className="w-full h-auto object-cover" />
+                <span className="block text-center text-sm text-gray-700 mt-2">Me at the installation</span>
               </div>
-              <div className="overflow-hidden rounded-lg shadow">
-                <img src="/images/outside-crowd.JPG" alt="Outside Crowd" className="w-full h-auto object-cover" />
+              <div className="overflow-hidden rounded-lg shadow flex flex-col">
+                <img src="/images/outside-glam.JPG" alt="Outside shots: Glam" className="w-full h-auto object-cover" />
+                <span className="block text-center text-sm text-gray-700 mt-2">Outside shots: Glam</span>
               </div>
-              <div className="overflow-hidden rounded-lg shadow">
-                <img src="/images/outside-glam.JPG" alt="Outside Glam" className="w-full h-auto object-cover" />
+              <div className="overflow-hidden rounded-lg shadow flex flex-col">
+                <img src="/images/inside-connection.JPG" alt="Inside shots: We're in it together" className="w-full h-auto object-cover" />
+                <span className="block text-center text-sm text-gray-700 mt-2">Inside shots: We're in it together</span>
+              </div>
+              <div className="overflow-hidden rounded-lg shadow flex flex-col">
+                <img src="/images/outside-crowd.JPG" alt="Outside shots: Crowd goes hard" className="w-full h-auto object-cover" />
+                <span className="block text-center text-sm text-gray-700 mt-2">Outside shots: Crowd goes hard</span>
+              </div>
+              <div className="overflow-hidden rounded-lg shadow flex flex-col">
+                <img src="/images/inside-bands.JPG" alt="Inside shots: The whole band" className="w-full h-auto object-cover" />
+                <span className="block text-center text-sm text-gray-700 mt-2">Inside shots: The whole band</span>
               </div>
             </div>
           </div>
