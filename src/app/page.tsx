@@ -75,58 +75,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Pricing Section */}
+          {/* Installation Gallery Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Print Pricing
+                Here’s how the installation looks
               </h2>
-              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-               Take a print (or transfer paper from the sublimation process) home! Text/DM me to coordinate.
-              </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Large Prints</h3>
-                <p className="text-gray-600 mb-2">12" x 18"</p>
-                <p className="text-2xl font-bold text-blue-600">$35</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="overflow-hidden rounded-lg shadow">
+                <img src="/images/inside-bands.JPG" alt="Inside Bands" className="w-full h-auto object-cover" />
               </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Medium Prints</h3>
-                <p className="text-gray-600 mb-2">10" x 15"</p>
-                <p className="text-2xl font-bold text-blue-600">$25</p>
+              <div className="overflow-hidden rounded-lg shadow">
+                <img src="/images/inside-connection.JPG" alt="Inside Connection" className="w-full h-auto object-cover" />
               </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">B Grade Prints</h3>
-                <p className="text-gray-600 mb-2">Medium/Large</p>
-                <p className="text-2xl font-bold text-blue-600">$15</p>
+              <div className="overflow-hidden rounded-lg shadow">
+                <img src="/images/me.JPG" alt="Me at the installation" className="w-full h-auto object-cover" />
               </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Prints</h3>
-                <p className="text-gray-600 mb-2">4" x 6" with grommet</p>
-                <p className="text-2xl font-bold text-blue-600">$10</p>
+              <div className="overflow-hidden rounded-lg shadow">
+                <img src="/images/outside-crowd.JPG" alt="Outside Crowd" className="w-full h-auto object-cover" />
               </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Transfer Papers</h3>
-                <p className="text-gray-600 mb-2">Medium/Large</p>
-                <p className="text-2xl font-bold text-blue-600">$5</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Small Transfer Papers</h3>
-                <p className="text-gray-600 mb-2">4" x 6"</p>
-                <p className="text-2xl font-bold text-green-600">Free</p>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6 md:col-span-2 lg:col-span-3">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Photopoetry Books</h3>
-                <p className="text-gray-600 mb-2">Photography by Beth Crane, poems by Tallen Gabriel</p>
-                <p className="text-2xl font-bold text-blue-600">sliding scale $25-50</p>
+              <div className="overflow-hidden rounded-lg shadow">
+                <img src="/images/outside-glam.JPG" alt="Outside Glam" className="w-full h-auto object-cover" />
               </div>
             </div>
           </div>

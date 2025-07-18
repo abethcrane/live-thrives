@@ -14,7 +14,7 @@ export default async function GalleryPage() {
               Photo Gallery
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Click on a photo to see camera settings and info about the band
+              Click on a photo to see camera settings + info about the band
             </p>
           </div>
           
