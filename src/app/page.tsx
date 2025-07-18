@@ -86,31 +86,31 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/me.JPG" alt="Me at the installation" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Me at the installation <a href="/gallery" className="text-blue-600 hover:text-blue-800 underline ml-1">(see all)</a>
+                  Me at the installation <a href="/gallery" className="text-blue-600 hover:text-blue-800 underline ml-1">(see all photos in the gallery)</a>
                 </span>
               </div>
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/outside-glam.JPG" alt="Outside shots: Glam" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Outside shots: Glam <a href="/gallery?tag=cool as heck" className="text-blue-600 hover:text-blue-800 underline ml-1">(glam)</a>
+                  Outside shots: <a href="/gallery?tag=cool as heck" className="text-blue-600 hover:text-blue-800 underline ml-1">Cool as heck</a>
                 </span>
               </div>
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/inside-connection.JPG" alt="Inside shots: We’re in it together" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Inside shots: We’re in it together <a href="/gallery?tag=in it together" className="text-blue-600 hover:text-blue-800 underline ml-1">(in it together)</a>
+                  Inside shots: <a href="/gallery?tag=in it together" className="text-blue-600 hover:text-blue-800 underline ml-1">In it together</a>
                 </span>
               </div>
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/outside-crowd.JPG" alt="Outside shots: Crowd goes hard" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Outside shots: Crowd goes hard <a href="/gallery?tag=crowd goes hard" className="text-blue-600 hover:text-blue-800 underline ml-1">(crowd goes hard)</a>
+                  Outside shots: <a href="/gallery?tag=crowd goes hard" className="text-blue-600 hover:text-blue-800 underline ml-1">Crowd goes hard</a>
                 </span>
               </div>
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/inside-bands.JPG" alt="Inside shots: The whole band" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Inside shots: The whole band <a href="/gallery?tag=band's all here" className="text-blue-600 hover:text-blue-800 underline ml-1">(band’s all here)</a>
+                  Inside shots: <a href="/gallery?tag=band's all here" className="text-blue-600 hover:text-blue-800 underline ml-1">The band's all here</a>
                 </span>
               </div>
             </div>
