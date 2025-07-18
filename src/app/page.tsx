@@ -86,7 +86,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
                 <img src="/images/me.JPG" alt="Me at the installation" className="w-full h-auto object-cover" />
                 <span className="block text-center text-sm text-gray-700 mt-2">
-                  Me at the installation <a href="/gallery" className="text-blue-600 hover:text-blue-800 underline ml-1">(see all photos in the gallery)</a>
+                  See all the photos in<a href="/gallery" className="text-blue-600 hover:text-blue-800 underline ml-1">the gallery</a>
                 </span>
               </div>
               <div className="overflow-hidden rounded-lg shadow flex flex-col">
@@ -114,8 +114,14 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
+            {/* Prints & Merch Section */}
+            <p className="text-center text-base text-purple-700 mt-8 pt-4">
+              ✨ Prints, mini prints (with grommet), and transfer paper available — text/DM beth if interested! ✨
+            </p>
+
           </div>
-                    {/* About Beth Section */}
+
+          {/* About Beth Section */}
                     <div className="bg-white rounded-lg shadow-sm p-8 sm:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-200">
