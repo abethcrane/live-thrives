@@ -8,14 +8,15 @@ import { getUniqueBands, getUniqueTags } from '@/lib/data';
 
 interface PhotoGridProps {
   photos: PhotoWithExif[];
+  initialTag?: string;
 }
 
 type SortOption = 'date' | 'band';
 type SortDirection = 'asc' | 'desc';
 
-export default function PhotoGrid({ photos }: PhotoGridProps) {
+export default function PhotoGrid({ photos, initialTag }: PhotoGridProps) {
   const [selectedBand, setSelectedBand] = useState<string>('');
-  const [selectedTag, setSelectedTag] = useState<string>('');
+  const [selectedTag, setSelectedTag] = useState<string>(initialTag || '');
   const [selectedColorType, setSelectedColorType] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortOption>('date');
